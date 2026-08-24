@@ -1,0 +1,56 @@
+body{
+    font-size: 16px;
+    color: #8c7f76;
+    font-family: serif;
+}
+
+.header{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 0.5px solid #8c7f76;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1{
+    grid-column: 2;
+}
+
+.bg{
+    background-color: #F2EEEB;
+    height: 100vh;
+}
+
+.w1200{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 96%;
+}
+
+/* コンテンツ */
+.content__heading{
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* ボタン */
+.form__button{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit{
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: #8c7f76;
+    color: #F4F4F4;
+    cursor:pointer;
+    text-align: center;
+}

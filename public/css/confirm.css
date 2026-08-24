@@ -1,0 +1,60 @@
+.confirm-table{
+    border: 1px solid #8c7f76;
+}
+
+.confirm-table__inner{
+    width: 100%;
+}
+
+.confirm-table__header{
+    padding: 15px;
+    width: 30%;
+    border-bottom: 1px solid #ddd;
+    background-color: #8c7f76;
+    color: #fff;
+}
+
+.confirm-table__txt{
+    padding: 15px;
+    border-bottom: 1px solid #8c7f76;
+    color: #8c7f76;
+    background: transparent;
+    vertical-align: middle;
+    height: 60px;
+}
+
+.confirm-table__txt [name="first_name"],
+.confirm-table__txt [name^="tel_"]{
+    width: 30px;
+}
+
+.confirm-table__row:last-child .confirm-table__header,
+.confirm-table__row:last-child .confirm-table__txt{
+    border-bottom-width: 0;
+}
+
+/* ボタン */
+.form__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.form__button-submit {
+    width: 10%;
+}
+
+.form__button-correction{
+    padding: 10px;
+    width: 10%;
+    height: 50px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+    color: #8c7f76;
+}

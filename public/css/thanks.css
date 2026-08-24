@@ -1,0 +1,39 @@
+.thanks__heading{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thanks__bg-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    font-weight: bold;
+    color: #8c7f76;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.thanks__main-txt{
+    position: relative;
+    z-index: 1;
+    color: #8c7f76;
+    text-align: center;
+}
+
+.form__button-submit{
+    text-decoration: none;
+    padding:10px 20px;
+}
+
+/* ヘッダー */
+.header{
+    display: none;
+}

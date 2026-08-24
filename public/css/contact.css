@@ -1,0 +1,127 @@
+/* フォーム */
+.form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form__group{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form__group-content {
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+}
+
+/* ラベル部分 */
+.form__group-ttl{
+    width: 30%;
+}
+
+.form__label--required{
+    margin-left: 5px;
+    color: #ff0000;
+}
+
+/* 入力項目 */
+.form__input--txt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form__input--txt input,
+.form__input--txt textarea,
+.form__input--txt select{
+    padding: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    color: #b5ada5;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.form__input--txt input{
+    height: 40px;
+}
+
+.form__input--txt textarea{
+    height: 180px;
+}
+
+.hyphen{
+    margin: 0 10px;
+}
+
+input[name="first_name"] {
+    width: 45%;
+}
+
+input[name="last_name"] {
+    width: 45%;
+}
+
+input[name^="tel_"] {
+    width: 30%;
+}
+
+select[name="category_id"] {
+    width: 50%;
+}
+
+/* お問い合わせ種類欄 */
+.form__input--txt select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23b5ada5"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 30px;
+    padding-right: 45px;
+}
+
+/* 性別欄 */
+.form__group--radio {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form__group--radio input {
+    margin-right: 5px;
+    width: auto;
+    display: none;
+}
+
+.form__label-txt::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.form__group--radio input:checked + .form__label-txt::before{
+    background-color: #8b7969;
+    border-color: #8b7969;
+}
+
+/* エラーメッセージ */
+.form__error{
+    margin-top: 8px;
+    color: #FF9494;
+    grid-column: 2;
+}
