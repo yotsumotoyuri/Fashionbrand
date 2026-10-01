@@ -28,6 +28,3 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 
 # ⚠️ Render用のポート番号を明示 ⚠️
 EXPOSE 10000
-
-echo "" >> Dockerfile
-echo "# test" >> Dockerfile
