@@ -3,7 +3,8 @@ services:
     name: your-app-name
     runtime: php
     buildCommand: "composer install && npm install && npm run build"
-    startCommand: "php artisan config:clear && php artisan cache:clear && chmod -R 777 database && php artisan migrate --force && php artisan serve --port $PORT"
+    # ここで先にファイルを作成し、権限を与えてからマイグレーションする
+    startCommand: "mkdir -p database && touch database/database.sqlite && chmod 666 database/database.sqlite && php artisan migrate --force && php artisan serve --port $PORT"
     envVars:
       - key: DB_CONNECTION
         value: sqlite
