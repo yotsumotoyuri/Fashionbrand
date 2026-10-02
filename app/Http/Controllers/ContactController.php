@@ -14,7 +14,7 @@ class ContactController extends Controller
     }
     public function contact(){
         $categories = Category::all();
-        return view('contact' , compact('categories'));
+        return view('contact', compact('categories'));
     }
 
     public function confirm(ContactRequest $request){
