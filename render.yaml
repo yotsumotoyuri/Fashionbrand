@@ -3,7 +3,7 @@ services:
     name: your-app-name
     runtime: php
     # ビルド時にファイルを作り、権限を与えておく
-    buildCommand: "composer install && mkdir -p database && touch database/database.sqlite && chmod 777 database/database.sqlite && npm install && npm run build"
+    buildCommand: "touch /tmp/database.sqlite && chmod 777 /tmp/database.sqlite && ..."
     # ここではマイグレーションのみ実行
     startCommand: "php artisan migrate --force && php artisan serve --port $PORT"
     envVars:
