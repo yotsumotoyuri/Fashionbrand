@@ -80,6 +80,25 @@ img{
     text-align: center;
 }
 
+/* リニューアル */
+.renewal{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.renewal__txt{
+    padding: 0 10px;
+}
+
 @media (max-width: 768px){
     .txt-center {
         text-align: left;

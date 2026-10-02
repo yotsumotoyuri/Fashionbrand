@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="{{ asset('css/auth/register.css') }}">
 @endsection
 
-@section('title', 'contact')
-
 @section('link')
 <a class="form__button-submit register-form__button-submit" href="/login">login</a>
 @endsection
@@ -69,4 +67,7 @@
         </form>
     </div>
     </div>
+<div class="renewal">
+    <p class="renewal__txt">現在、オリジナルページへのリニューアルに向けてメンテナス中です</p>
+</div>
 @endsection

@@ -172,4 +172,7 @@
         </div>
     </form>
     </div>
+<div class="renewal">
+    <p class="renewal__txt">現在、オリジナルページへのリニューアルに向けてメンテナス中です</p>
+</div>
 @endsection
