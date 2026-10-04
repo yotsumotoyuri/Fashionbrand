@@ -2,7 +2,7 @@ FROM php:8.2-apache
 
 # Laravelに必要なPHPの拡張機能と、Composerをインストール
 RUN apt-get update && apt-get install -y unzip git libzip-dev \
-    && docker-php-ext-install zip
+    && docker-php-ext-install zip pdo_mysql
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # ⚠️ Renderの仕様に合わせて、Apacheのポートを80番から10000番に変更 ⚠️
