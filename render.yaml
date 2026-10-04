@@ -2,7 +2,7 @@ services:
   - type: web
     name: your-app-name
     runtime: php
-    buildCommand: "composer install --no-dev --optimize-autoloader && npm install && npm run build"
+    buildCommand: "chmod +x render-build.sh && ./render-build.sh"
     # 修正箇所：startCommand を組み込みサーバーに変更
     startCommand: "php artisan migrate --force && php -S 0.0.0.0:$PORT -t public"
     envVars:
