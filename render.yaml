@@ -2,11 +2,11 @@ services:
   - type: web
     name: your-app-name
     env: docker
-    buildCommand: "php artisan config:cache && php artisan route:cache && composer install --no-dev --optimize-autoloader && php artisan migrate --force && npm install && npm run build"
+    buildCommand: "php artisan config:cache && composer install --no-dev --optimize-autoloader && php artisan migrate --force && npm install && npm run build"
     envVars:
       - key: DB_CONNECTION
         value: pgsql
       - key: DATABASE_URL
         fromDatabase:
-          name: myapp-db # 作成したPostgreSQLサービス名
+          name: myapp-db # ← 作成したPostgreSQLのサービス名
           property: connectionString
