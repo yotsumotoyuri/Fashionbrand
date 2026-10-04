@@ -2,11 +2,15 @@ services:
   - type: web
     name: your-app-name
     runtime: php
-    buildCommand: "composer install && npm install && npm run build"
-    # ファイル作成は行わず、マイグレーションのみ実行
-    startCommand: "php artisan migrate --force && php artisan serve --port $PORT"
+    buildCommand: "composer install --no-dev --optimize-autoloader && npm install && npm run build"
+    # 修正箇所：startCommand を組み込みサーバーに変更
+    startCommand: "php artisan migrate --force && php -S 0.0.0.0:$PORT -t public"
     envVars:
       - key: DB_CONNECTION
         value: sqlite
       - key: DB_DATABASE
-        value: /opt/render/project/src/database/database.sqlite
+        value: /var/lib/sqlite/database.sqlite # 永続化エリア推奨
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_ENV
+        value: "production"
