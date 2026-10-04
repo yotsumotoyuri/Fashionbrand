@@ -34,7 +34,15 @@
         </nav>
     </header>
     <div class="top__mv">
-        <video src="{{ asset('video/top.mp4') }}" loop autoplay muted></video>
+        <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        poster=""
+        >
+        <source src="https://res.cloudinary.com/o1ysvlxe/video/upload/v1791117340/top-compressed.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="top__txt">
         <h2 class="sub__ttl">About</h2>
