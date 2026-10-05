@@ -6,7 +6,8 @@ services:
     envVars:
       - key: DB_CONNECTION
         value: pgsql
-      - key: DATABASE_URL
+      - key: DB_HOST
         fromDatabase:
-          name: myapp-db # ← 作成したPostgreSQLのサービス名
-          property: connectionString
+          name: myapp-db
+          property: host
+      # 他も同様に fromDatabase で設定
