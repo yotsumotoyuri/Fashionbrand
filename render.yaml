@@ -2,4 +2,4 @@ services:
   - type: web
     name: your-app-name
     env: docker
-    buildCommand: "rm -rf bootstrap/cache/*.php && php artisan config:clear && php artisan cache:clear && composer install --no-dev --optimize-autoloader && php artisan migrate --force && npm install && npm run build"
+    buildCommand: "php -r 'echo \"DB_CONNECTION: \" . env(\"DB_CONNECTION\") . \"\\n\";' && php artisan migrate --force && composer install --no-dev --optimize-autoloader && npm install && npm run build"
