@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'pgsql',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,18 +64,18 @@ return [
         ],
 
         'pgsql' => [
-        'driver' => 'pgsql',
-        'url' => env('DATABASE_URL'),
-        'host' => 'dpg-xxxxxx.render.com', // ここにRenderのPostgreSQLのホスト名を直接書く
-        'port' => '5432',
-        'database' => 'your_db_name',     // PostgreSQLのデータベース名を直接書く
-        'username' => 'your_username',     // ユーザー名を直接書く
-        'password' => 'your_password',     // パスワードを直接書く
-        'charset' => 'utf8',
-        'prefix' => '',
-        'prefix_indexes' => true,
-        'search_path' => 'public',
-        'sslmode' => 'prefer',
+            'driver' => 'pgsql',
+            'url' => null, // nullにする
+            'host' => 'ここにPostgreSQLのホスト名を貼り付け',
+            'port' => '5432',
+            'database' => 'ここにデータベース名を貼り付け',
+            'username' => 'ここにユーザー名を貼り付け',
+            'password' => 'ここにパスワードを貼り付け',
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'search_path' => 'public',
+            'sslmode' => 'prefer',
         ],
         'sqlsrv' => [
             'driver' => 'sqlsrv',

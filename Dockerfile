@@ -28,11 +28,3 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 
 # ⚠️ Render用のポート番号を明示 ⚠️
 EXPOSE 10000
-
-# 環境変数を強制的に上書きして固定する
-ENV DB_CONNECTION=pgsql
-ENV DB_HOST=dpg-xxxxxx.render.com  # ← 実際のPostgreSQLのホスト名
-ENV DB_PORT=5432
-ENV DB_DATABASE=db_name            # ← 実際のDB名
-ENV DB_USERNAME=user_name          # ← 実際のユーザー名
-ENV DB_PASSWORD=password           # ← 実際のパスワード

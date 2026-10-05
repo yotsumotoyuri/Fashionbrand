@@ -3,11 +3,3 @@ services:
     name: your-app-name
     env: docker
     buildCommand: "rm -rf bootstrap/cache/*.php && php artisan config:clear && php artisan cache:clear && composer install --no-dev --optimize-autoloader && php artisan migrate --force && npm install && npm run build"
-    envVars:
-      - key: DB_CONNECTION
-        value: pgsql
-      - key: DB_HOST
-        fromDatabase:
-          name: myapp-db
-          property: host
-      # 他も同様に fromDatabase で設定
