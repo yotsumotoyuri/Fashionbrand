@@ -66,11 +66,11 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => null, // nullにする
-            'host' => 'ここにPostgreSQLのホスト名を貼り付け',
+            'host' => 'dpg-db1dkj49v7es73f2u3d0-a',
             'port' => '5432',
-            'database' => 'ここにデータベース名を貼り付け',
-            'username' => 'ここにユーザー名を貼り付け',
-            'password' => 'ここにパスワードを貼り付け',
+            'database' => 'myapp_db_vjvw',
+            'username' => 'myapp_db_vjvw_user',
+            'password' => 'U4zoPUi2IdOUBfMW84MaWMWLq6RTENCr',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
