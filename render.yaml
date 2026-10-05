@@ -2,7 +2,7 @@ services:
   - type: web
     name: your-app-name
     env: docker
-    buildCommand: "php artisan config:cache && composer install --no-dev --optimize-autoloader && php artisan migrate --force && npm install && npm run build"
+    buildCommand: "rm -rf bootstrap/cache/*.php && php artisan config:clear && php artisan cache:clear && composer install --no-dev --optimize-autoloader && php artisan migrate --force && npm install && npm run build"
     envVars:
       - key: DB_CONNECTION
         value: pgsql
