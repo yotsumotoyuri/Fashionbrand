@@ -2,4 +2,4 @@ services:
   - type: web
     name: your-app-name
     env: docker
-    buildCommand: "echo '--- MIGRATE STATUS START ---' && php artisan migrate:status && echo '--- MIGRATE STATUS END ---' && php artisan migrate --force && composer install --no-dev --optimize-autoloader && npm install && npm run build"
+    buildCommand: "composer install --no-dev --optimize-autoloader && npm install && npm run build"
