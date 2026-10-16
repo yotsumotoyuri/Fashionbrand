@@ -1,0 +1,171 @@
+.jacket__slideshow-container{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.jacket__slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.jacket__slide img{
+    object-fit: cover;
+    object-position: center;
+}
+
+.jacket__slide.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 紹介文 */
+.jacket__detail-ttl{
+    font-size: 40px;
+}
+
+/* 画像分割自動スライダー */
+.jacket__split{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+.jacket__column{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.jacket__track{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+.jacket__track img{
+    object-fit: cover;
+}
+
+.jacket__column-left .jacket__track{
+    top: 0;
+    animation: scroll-up 35s linear infinite;
+}
+
+@keyframes scroll-up{
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-50%);}
+}
+
+.jacket__column-right .jacket__track{
+    top: 0;
+    animation: scroll-down 35s linear infinite;
+}
+
+@keyframes scroll-down{
+    0% {transform: translateY(-50%);}
+    100% {transform: translateY(0);}
+}
+
+/* タブボタン */
+.jacket__tab{
+    display: flex;
+    background-color: #F2EEEB;
+    border-radius: 30px;
+}
+
+.jacket__tab-btn{
+    flex: 1;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: none;
+    color: #8c7f76;
+    border-radius: 30px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+.jacket__tab-btn.active{
+    background-color: #8c7f76;
+    color: #fff;
+}
+
+/* コンテンツ */
+.jacket__item{
+    display: none;
+    padding: 20px;
+}
+
+.jacket__item.active{
+    display: block;
+    color: #8c7f76;
+}
+
+.jacket__item-grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.jacket__item-txt a{
+    line-height: 1;
+    color: #8c7f76;
+    text-decoration: none;
+}
+
+.jacket__item-img img{
+    object-fit: cover;
+    aspect-ratio: 2 / 3;
+    border-radius: 30px;
+    object-position: center;
+}
+
+.jacket__item-size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.jacket__item-size div{
+    padding: 7px;
+    line-height: 1;
+    background-color: #F2EEEB;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px){
+    /* 紹介文 */
+    .jacket__detail-ttl {
+        font-size: 20px;
+    }
+
+    /* 画像分割自動スライダー */
+    .jacket__split {
+        height: 50vh;
+    }
+
+    /* コンテンツ */
+    .jacket__tab-btn{
+        font-size: 16px;
+    }
+
+    .jacket__item-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .jacket__item-box{
+        margin-bottom: 20px;
+    }
+}

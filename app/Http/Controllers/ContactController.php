@@ -18,6 +18,12 @@ class ContactController extends Controller
         return view('contact', compact('categories'));
     }
 
+    public function jacket(){
+        $jackets = Contact::Paginate(4);
+
+        return view('jacket', compact('jackets'));
+    }
+
     public function confirm(ContactRequest $request){
         $contact = $request->all();
         $category = Category::find($request->category_id);

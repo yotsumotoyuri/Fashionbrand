@@ -10,29 +10,6 @@
 
 @section('content')
 <div class="top mb150">
-    <header class="top-header">
-        <h1 class="top-header__logo">
-            <a href="./">FashionablyLate</a>
-        </h1>
-
-        <button class="top-header__hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="top-nav">
-            <ul class="top-nav__list">
-                <li><a href="" target="_blank">Home</a></li>
-                <li><a href="" target="_blank">About</a></li>
-                <li><a href="" target="_blank">Products</a></li>
-                <li><a href="" target="_blank">Pick up</a></li>
-                <li><a href="/contact" target="_blank">Contact</a></li>
-                <li><a href="/register" target="_blank">Register</a></li>
-                <li><a href="/login" target="_blank">Login</a></li>
-            </ul>
-        </nav>
-    </header>
     <div class="top__mv">
         <video 
         autoplay 
@@ -118,7 +95,7 @@
             <div class="product__description">
                 <h2>Jacket</h2>
                 <p>トレンドに左右されず、ワードローブに1着は持っておきたい大人のカジュアルジャケットです。</p>
-                <a href="./" class="btn">view more</a>
+                <a href="/jacket" target="_blank" class="btn">view more</a>
             </div>
             <div class="product__sub sub2">
                 <div><img src="{{ asset('img/jacket2.jpg') }}" alt=""></div>
@@ -150,7 +127,7 @@
     <div class="pickup__flex">
         <div class="pickup__card">
             <div class="pickup__img">
-                <a href="https://blue855385.studio.site/posts/the-modern-website" target="_blank"><img src="{{ asset('img/pickup1.jpg') }}" alt=""></a>
+                <a href="https://blue855385.studio.site/posts/the-modern-website"><img src="{{ asset('img/pickup1.jpg') }}" alt=""></a>
             </div>
             <div class="pickup__content">
                 <div class="pickup__border"></div>
@@ -199,30 +176,13 @@
         <p>ご依頼やご相談については、お電話・お問い合わせフォームより、お気軽にお問い合わせください。</p>
     </div>
     <div class="contact__flex">
-        <div><a href="/contact" class="btn" target="_blank">Contact Form</a></div>
+        <div><a href="/contact" target="_blank" class="btn">Contact Form</a></div>
         <div class="contact__tel">
             <span class="contact__tel-span">TEL</span>
             <a href="tel:000000000">000000000</a>
         </div>
     </div>
 </div>
-
-<footer class="top-footer">
-        <h2 class="top-footer__logo">
-            <a href="./">FashionablyLate</a>
-        </h2>
-        <nav class="footer-nav">
-            <ul class="footer-nav__list">
-                <li><a href="" target="_blank">Home</a></li>
-                <li><a href="" target="_blank">About</a></li>
-                <li><a href="" target="_blank">Products</a></li>
-                <li><a href="" target="_blank">Pick up</a></li>
-                <li><a href="/contact" target="_blank">Contact</a></li>
-                <li><a href="/register" target="_blank">Register</a></li>
-                <li><a href="/login" target="_blank">Login</a></li>
-            </ul>
-        </nav>
-</footer>
 
 @endsection
 
@@ -258,15 +218,4 @@ window.addEventListener("scroll", () => {
         });
 </script>
 
-<!-- ハンバーガーメニュー -->
-<script>
-    const hamburger = document.querySelector('.top-header__hamburger');
-    const nav = document.querySelector('.top-nav');
-
-    hamburger.addEventListener('click', function() {
-        // ボタンとメニューの両方に is-active クラスをつけ外しする
-        hamburger.classList.toggle('is-active');
-        nav.classList.toggle('is-active');
-    });
-</script>
 @endsection
