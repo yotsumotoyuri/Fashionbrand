@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.2.24-apache
 
 # Laravelに必要なPHPの拡張機能と、Composerをインストール
 RUN apt-get update && apt-get install -y unzip git libzip-dev libpq-dev \
@@ -33,3 +33,4 @@ ENTRYPOINT ["entrypoint.sh"]
 
 EXPOSE 10000
 CMD ["apache2-foreground"]
+
